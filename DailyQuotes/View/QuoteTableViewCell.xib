@@ -16,15 +16,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="400" height="107"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quotes Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="tOb-tm-MPE">
-                        <rect key="frame" x="10" y="0.0" width="380" height="66"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quotes Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="tOb-tm-MPE">
+                        <rect key="frame" x="10" y="10" width="380" height="53.5"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="- Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QnK-x0-bcE">
-                        <rect key="frame" x="313" y="72" width="57" height="18"/>
-                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                        <rect key="frame" x="323" y="75.5" width="47" height="14.5"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -32,10 +32,10 @@
                 <constraints>
                     <constraint firstAttribute="bottomMargin" secondItem="QnK-x0-bcE" secondAttribute="bottom" constant="6" id="7RL-Pq-Tsf"/>
                     <constraint firstItem="tOb-tm-MPE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="RER-G4-1W6"/>
-                    <constraint firstItem="QnK-x0-bcE" firstAttribute="top" secondItem="tOb-tm-MPE" secondAttribute="bottom" constant="6" id="Zlu-5m-uIy"/>
+                    <constraint firstItem="QnK-x0-bcE" firstAttribute="top" secondItem="tOb-tm-MPE" secondAttribute="bottom" constant="12" id="Zlu-5m-uIy"/>
                     <constraint firstAttribute="trailingMargin" secondItem="QnK-x0-bcE" secondAttribute="trailing" constant="10" id="jFe-lF-VdP"/>
                     <constraint firstAttribute="trailing" secondItem="tOb-tm-MPE" secondAttribute="trailing" constant="10" id="o6u-7S-ygm"/>
-                    <constraint firstItem="tOb-tm-MPE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="uuU-o8-hGe"/>
+                    <constraint firstItem="tOb-tm-MPE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="uuU-o8-hGe"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

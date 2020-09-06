@@ -13,49 +13,44 @@ struct QuotesManager {
     
   
     
-    func fetchAllQuotes(){
-        let mainUrl = Contants.API_URL
-        performRequest(with: mainUrl) { (quotes) in
-            if let quotesData = quotes {
-                for quotes in quotesData{
-                    print(quotes.text)
-                }
-            }
-        }
-    }
-    
-    
-    func performRequest(with urlString : String,completion: @escaping ([QuoteModel]?) -> Void){
+    func fetchAllQuotes(onCompletion : @escaping ([QuoteModel]) -> Void){
         
-        guard let url = URL(string: urlString) else {
+        
+        let mainUrl = Contants.API_URL
+        
+        guard let url = URL(string: mainUrl) else {
             return
             
         }
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error{
                 print(error.localizedDescription)
-                completion(nil)
+        
                 return
             }
             
             
             guard let safeData = data else{
-                completion(nil)
+
                 return
             }
             
             let decoder = JSONDecoder()
             
             guard let decodedData = try? decoder.decode([QuoteModel].self, from: safeData) else{
-                completion(nil)
+    
                 return
             }
             
-            completion(decodedData)
+            onCompletion(decodedData)
            
 
         }.resume()
+        
     }
+    
+    
+    
     
     
   
